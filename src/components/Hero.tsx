@@ -26,7 +26,7 @@ export function Hero() {
           </p>
 
           <div className="hero-fade-4 mt-8 flex flex-wrap gap-x-6 gap-y-2 font-mono text-[11px] uppercase tracking-[0.13em] text-mute">
-            <span>Based in {site.location}</span>
+            <span>{site.location}</span>
           </div>
 
           <div className="hero-fade-5 mt-10 flex flex-wrap items-center gap-3">
