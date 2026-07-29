@@ -51,12 +51,8 @@ export function Contact() {
             Let&apos;s build something useful.
           </h2>
           <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-mute">
-            Open to internships and roles in AI development, full-stack, frontend,
-            and software engineering. Update contact details in{" "}
-            <code className="rounded bg-ink/5 px-1.5 py-0.5 text-[13px] text-ink">
-              src/data/portfolio.ts
-            </code>
-            .
+            Open to internships and roles in AI development, full-stack,
+            frontend, and software engineering.
           </p>
         </Reveal>
 

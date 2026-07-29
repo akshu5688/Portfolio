@@ -14,11 +14,11 @@ export type Project = {
 export const site = {
   name: "Akshat Mehra",
   role: "AI & Full Stack Developer",
-  location: "Kangra, Himachal Pradesh, India",
-  email: "", // fill later
-  phone: "", // fill later
-  linkedin: "", // fill later
-  github: "", // fill later
+  location: "Palampur, Himachal Pradesh, India",
+  email: "mehrakshu@gmail.com",
+  phone: "9805508996",
+  linkedin: "https://www.linkedin.com/in/akshat-mehra-b505a9256",
+  github: "https://github.com/akshu5688",
   portfolio: "", // fill later
   summary:
     "BCA student building production-ready AI-powered web apps and full-stack SaaS products. Experienced with React, Next.js, Supabase, and modern development workflows using Cursor AI. Focused on clean UI, scalable architecture, and shipping real startup products.",
