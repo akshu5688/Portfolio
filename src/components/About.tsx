@@ -29,7 +29,6 @@ export function About() {
                 <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-mute">
                   Current focus
                 </p>
-                <span className="availability-dot" aria-hidden />
               </div>
               <ul className="space-y-0">
               {about.focus.map((item, index) => (

@@ -385,26 +385,6 @@ body {
   animation: scan-hero 9s ease-in-out infinite;
 }
 
-.availability-dot {
-  position: relative;
-  display: inline-flex;
-  width: 8px;
-  height: 8px;
-  flex: 0 0 auto;
-  border-radius: 999px;
-  background: var(--accent);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 12%, transparent);
-}
-
-.availability-dot::after {
-  content: "";
-  position: absolute;
-  inset: -5px;
-  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
-  border-radius: inherit;
-  animation: status-pulse 2.4s ease-out infinite;
-}
-
 .engineering-visual {
   position: relative;
   min-height: 460px;
@@ -438,20 +418,6 @@ body {
   height: 7px;
   border-radius: 999px;
   background: color-mix(in srgb, var(--ink) 18%, transparent);
-}
-
-.visual-status {
-  color: var(--accent);
-}
-
-.visual-status::before {
-  content: "";
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  margin-right: 5px;
-  border-radius: 999px;
-  background: currentColor;
 }
 
 .visual-canvas {
@@ -1195,7 +1161,6 @@ body {
   .live-site-backdrop,
   .live-site-dialog,
   .hero-scanline,
-  .availability-dot::after,
   .visual-connections .signal-path,
   .core-ring,
   .visual-node,

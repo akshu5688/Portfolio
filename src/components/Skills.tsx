@@ -31,7 +31,6 @@ export function Skills() {
                   <h3 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/50">
                     {String(index + 1).padStart(2, "0")} / {category}
                   </h3>
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#7dd3b6]" />
                 </div>
                 <ul className="flex flex-wrap gap-2">
                   {items.map((skill) => (
