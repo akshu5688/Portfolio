@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Instrument_Sans, Outfit } from "next/font/google";
+import { BackgroundGraphics } from "@/components/BackgroundGraphics";
 import "./globals.css";
 
 const instrumentSans = Instrument_Sans({
@@ -64,7 +65,10 @@ export default function RootLayout({
       lang="en"
       className={`${instrumentSans.variable} ${outfit.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full font-sans">
+        <BackgroundGraphics />
+        <div className="relative z-10 flex min-h-screen flex-col">{children}</div>
+      </body>
     </html>
   );
 }

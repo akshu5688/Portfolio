@@ -9,9 +9,9 @@ export function About() {
           <p className="section-label">About</p>
         </Reveal>
 
-        <div className="mt-12 grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
+        <div className="mt-12 grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
           <Reveal delay={80}>
-            <p className="text-lg leading-relaxed text-mute sm:text-xl">
+            <p className="max-w-2xl font-display text-[clamp(1.6rem,3vw,2.35rem)] font-medium leading-[1.25] tracking-[-0.025em] text-ink">
               {site.summary}
             </p>
             <p className="mt-6 text-[15px] leading-relaxed text-mute">
@@ -24,16 +24,27 @@ export function About() {
           </Reveal>
 
           <Reveal delay={160}>
-            <ul className="space-y-4 border-l border-ink/10 pl-6">
-              {about.focus.map((item) => (
+            <div className="approach-panel">
+              <div className="mb-6 flex items-center justify-between border-b border-ink/10 pb-4">
+                <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-mute">
+                  Current focus
+                </p>
+                <span className="availability-dot" aria-hidden />
+              </div>
+              <ul className="space-y-0">
+              {about.focus.map((item, index) => (
                 <li
                   key={item}
-                  className="text-[15px] font-medium leading-snug text-ink"
+                  className="flex gap-4 border-b border-ink/[0.07] py-3.5 text-[14px] font-medium leading-snug text-ink last:border-0"
                 >
-                  {item}
+                  <span className="font-mono text-[10px] text-accent">
+                    0{index + 1}
+                  </span>
+                  <span>{item}</span>
                 </li>
               ))}
-            </ul>
+              </ul>
+            </div>
           </Reveal>
         </div>
       </div>

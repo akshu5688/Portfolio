@@ -7,32 +7,95 @@ import { Reveal } from "./Reveal";
 
 export function Projects() {
   return (
-    <section id="projects" className="section-pad scroll-mt-20">
+    <section id="projects" className="section-pad scroll-mt-20 overflow-hidden">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
-          <p className="section-label">Projects</p>
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="section-label">Projects</p>
+              <h2 className="section-title mt-3">Selected product work</h2>
+            </div>
+            <p className="max-w-sm text-[14px] leading-relaxed text-mute">
+              Full-stack products and interfaces designed for real users,
+              operational workflows, and startup teams.
+            </p>
+          </div>
         </Reveal>
 
-        <div className="mt-14 divide-y divide-ink/10 border-y border-ink/10">
+        <div className="mt-14 grid gap-5 lg:grid-cols-2">
           {projects.map((project, index) => (
-            <Reveal key={project.slug} delay={index * 60}>
-              <article className="project-row group grid gap-6 py-10 md:grid-cols-[1fr_1.1fr] md:gap-12">
-                <div>
-                  <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                    <h3>
-                      <Link
-                        href={`/projects/${project.slug}`}
-                        className="font-display text-2xl font-semibold tracking-tight text-ink transition-colors hover:text-accent group-hover:text-accent"
-                      >
-                        {project.name}
-                      </Link>
-                    </h3>
-                    <span className="text-sm text-mute">{project.role}</span>
+            <Reveal
+              key={project.slug}
+              delay={index * 70}
+              className={index === 0 ? "lg:col-span-2" : ""}
+            >
+              <article
+                className={`project-card group h-full overflow-hidden ${
+                  index === 0
+                    ? "grid lg:grid-cols-[0.9fr_1.1fr]"
+                    : "flex flex-col"
+                }`}
+              >
+                <div className={`project-art project-art-${index + 1}`}>
+                  <div className="project-browser">
+                    <div className="project-browser-bar">
+                      <span />
+                      <span />
+                      <span />
+                      <div className="project-url">{project.live.replace(/^https?:\/\//, "")}</div>
+                    </div>
+                    <div className="project-browser-body">
+                      <div className="browser-sidebar">
+                        <span className="active" />
+                        <span />
+                        <span />
+                        <span />
+                      </div>
+                      <div className="browser-content">
+                        <div className="browser-heading" />
+                        <div className="browser-copy" />
+                        <div className="browser-grid">
+                          <span />
+                          <span />
+                          <span />
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <p className="mt-4 text-[15px] leading-relaxed text-mute">
+                  <span className="project-number">0{index + 1}</span>
+                </div>
+
+                <div className="flex flex-1 flex-col p-6 sm:p-8">
+                  <div className="flex flex-wrap items-start justify-between gap-3">
+                    <div>
+                      <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.14em] text-accent">
+                        {project.role}
+                      </p>
+                      <h3>
+                        <Link
+                          href={`/projects/${project.slug}`}
+                          className="font-display text-2xl font-semibold tracking-tight text-ink transition-colors hover:text-accent"
+                        >
+                          {project.name}
+                        </Link>
+                      </h3>
+                    </div>
+                    <span className="project-arrow" aria-hidden>↗</span>
+                  </div>
+
+                  <p className="mt-5 text-[15px] leading-relaxed text-mute">
                     {project.description}
                   </p>
-                  <div className="mt-6 flex flex-wrap gap-3">
+
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {project.technologies.slice(0, 5).map((tech) => (
+                      <span key={tech} className="tech-chip">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-auto flex flex-wrap gap-3 pt-7">
                     <Link
                       href={`/projects/${project.slug}`}
                       className="btn-primary !px-4 !py-2 !text-[13px]"
@@ -56,29 +119,6 @@ export function Projects() {
                         GitHub
                       </a>
                     ) : null}
-                  </div>
-                </div>
-
-                <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-mute">
-                    Key features
-                  </p>
-                  <ul className="mt-3 grid gap-2 sm:grid-cols-2">
-                    {project.features.map((feature) => (
-                      <li
-                        key={feature}
-                        className="text-[14px] font-medium text-ink"
-                      >
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <span key={tech} className="tech-chip">
-                        {tech}
-                      </span>
-                    ))}
                   </div>
                 </div>
               </article>

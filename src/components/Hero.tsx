@@ -1,40 +1,53 @@
 import { site } from "@/data/portfolio";
+import { EngineeringVisual } from "./EngineeringVisual";
 
 export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden pb-20 pt-28 sm:pb-28 sm:pt-32"
+      className="relative flex min-h-[100svh] items-center overflow-hidden pb-16 pt-28 sm:pb-20 sm:pt-32"
     >
       <div className="hero-glow pointer-events-none absolute inset-0" aria-hidden />
       <div className="hero-grid pointer-events-none absolute inset-0 opacity-[0.35]" aria-hidden />
+      <div className="hero-scanline pointer-events-none absolute inset-0" aria-hidden />
 
-      <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-8">
-        <p className="hero-fade-1 mb-5 text-[13px] font-medium uppercase tracking-[0.18em] text-accent">
-          {site.location}
-        </p>
+      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+        <div>
+          <div className="hero-fade-1 mb-7 flex flex-wrap items-center gap-3">
+            <span className="availability-dot" aria-hidden />
+            <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-accent">
+              Software engineering · AI · Web
+            </p>
+          </div>
 
-        <h1 className="hero-fade-2 font-display text-[clamp(2.75rem,8vw,5.5rem)] font-semibold leading-[0.95] tracking-[-0.04em] text-ink">
-          {site.name}
-        </h1>
+          <h1 className="hero-fade-2 font-display text-[clamp(3rem,8vw,5.8rem)] font-semibold leading-[0.93] tracking-[-0.05em] text-ink">
+            Building digital
+            <span className="block text-accent">products that work.</span>
+          </h1>
 
-        <p className="hero-fade-3 mt-5 max-w-xl text-xl font-medium tracking-tight text-ink/80 sm:text-2xl">
-          {site.role}
-        </p>
+          <p className="hero-fade-3 mt-7 max-w-xl text-[17px] leading-relaxed text-mute sm:text-lg">
+            I&apos;m {site.name}, an {site.role} focused on thoughtful interfaces,
+            scalable full-stack systems, and AI-powered applications.
+          </p>
 
-        <p className="hero-fade-4 mt-6 max-w-lg text-[15px] leading-relaxed text-mute sm:text-base">
-          Building production-ready AI-powered web apps and full-stack SaaS
-          products — from authentication and dashboards to APIs and deployment.
-        </p>
+          <div className="hero-fade-4 mt-8 flex flex-wrap gap-x-6 gap-y-2 font-mono text-[11px] uppercase tracking-[0.13em] text-mute">
+            <span>Based in {site.location}</span>
+            <span className="hidden text-ink/25 sm:inline">/</span>
+            <span>Shipping for the web</span>
+          </div>
 
-        <div className="hero-fade-5 mt-10 flex flex-wrap items-center gap-3">
-          <a href="#projects" className="btn-primary">
-            View projects
-          </a>
-          <a href="#contact" className="btn-ghost">
-            Contact
-          </a>
+          <div className="hero-fade-5 mt-10 flex flex-wrap items-center gap-3">
+            <a href="#projects" className="btn-primary">
+              Explore selected work
+              <span aria-hidden className="ml-2">↘</span>
+            </a>
+            <a href="#contact" className="btn-ghost">
+              Get in touch
+            </a>
+          </div>
         </div>
+
+        <EngineeringVisual />
       </div>
     </section>
   );

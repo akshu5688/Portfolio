@@ -22,12 +22,7 @@ export function LiveSiteButton({
   children,
 }: LiveSiteButtonProps) {
   const [open, setOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const titleId = useId();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -47,7 +42,7 @@ export function LiveSiteButton({
   }, [open]);
 
   const dialog =
-    open && mounted
+    open && typeof document !== "undefined"
       ? createPortal(
           <div
             className="live-site-overlay fixed inset-0 z-[9999] flex items-center justify-center p-5"
