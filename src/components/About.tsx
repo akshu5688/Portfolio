@@ -15,11 +15,10 @@ export function About() {
               {site.summary}
             </p>
             <p className="mt-6 text-[15px] leading-relaxed text-mute">
-              Currently pursuing a {about.education} at {about.college}
-              {about.university ? `, ${about.university}` : ""}, expected
-              graduation {about.graduation}. Experience spans startup
-              environments where production quality, iteration speed, and clean
-              delivery matter.
+              Completed a {about.education} at {about.college}
+              {about.university ? `, ${about.university}` : ""}. Experience
+              spans startup environments where production quality, iteration
+              speed, and clean delivery matter.
             </p>
           </Reveal>
 

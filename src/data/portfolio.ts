@@ -21,14 +21,13 @@ export const site = {
   github: "https://github.com/akshu5688",
   portfolio: "", // fill later
   summary:
-    "BCA student building production-ready AI-powered web apps and full-stack SaaS products. Experienced with React, Next.js, Supabase, and modern development workflows using Cursor AI. Focused on clean UI, scalable architecture, and shipping real startup products.",
+    "BCA graduate building production-ready AI-powered web apps and full-stack SaaS products. Experienced with React, Next.js, Supabase, and modern development workflows using Cursor AI. Focused on clean UI, scalable architecture, and shipping real startup products.",
 };
 
 export const about = {
   education: "Bachelor of Computer Applications (BCA)",
   college: "Dronacharya PG College, Rait",
   university: "", // fill later
-  graduation: "2026",
   focus: [
     "AI-powered web applications",
     "Full-stack & SaaS products",
@@ -188,5 +187,4 @@ export const navLinks = [
   { href: "/#experience", label: "Experience" },
   { href: "/#projects", label: "Projects" },
   { href: "/#skills", label: "Skills" },
-  { href: "/#contact", label: "Contact" },
 ];
