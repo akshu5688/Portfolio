@@ -224,6 +224,32 @@ body {
   font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
 }
 
+.code-texture-title,
+.code-texture-accent {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: transparent;
+  background-repeat: repeat;
+  background-size: 196px 42px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: saturate(1.2) contrast(1.08);
+}
+
+.code-texture-title {
+  background-color: #080d0c;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='196' height='42' viewBox='0 0 196 42'%3E%3Cg font-family='monospace' font-size='6.5' font-weight='700'%3E%3Ctext x='0' y='8' fill='%2369d2e7'%3Econst build = design %2B code;%3C/text%3E%3Ctext x='7' y='19' fill='%23f7c873'%3Einterface Product %7B ship(); %7D%3C/text%3E%3Ctext x='0' y='30' fill='%23f08cab'%3E01 10 API UI DATA DEPLOY%3C/text%3E%3Ctext x='15' y='41' fill='%238ee3b0'%3Efunction createFuture()%3C/text%3E%3C/g%3E%3C/svg%3E");
+  -webkit-text-stroke: 0.85px rgba(8, 13, 12, 0.92);
+  text-shadow: 0 2px 18px rgba(16, 20, 19, 0.1);
+}
+
+.code-texture-accent {
+  background-color: #075f47;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='196' height='42' viewBox='0 0 196 42'%3E%3Cg font-family='monospace' font-size='6.5' font-weight='700'%3E%3Ctext x='0' y='8' fill='%23fff0a8'%3Econst build = design %2B code;%3C/text%3E%3Ctext x='7' y='19' fill='%23a7e8ff'%3Einterface Product %7B ship(); %7D%3C/text%3E%3Ctext x='0' y='30' fill='%23ffc0df'%3E01 10 API UI DATA DEPLOY%3C/text%3E%3Ctext x='15' y='41' fill='%23ffffff'%3Efunction createFuture()%3C/text%3E%3C/g%3E%3C/svg%3E");
+  -webkit-text-stroke: 0.85px rgba(7, 95, 71, 0.9);
+  text-shadow: 0 2px 18px rgba(11, 117, 86, 0.13);
+}
+
 .section-pad {
   padding-top: 5.5rem;
   padding-bottom: 5.5rem;

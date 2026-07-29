@@ -13,9 +13,11 @@ export function Hero() {
 
       <div className="relative mx-auto grid w-full max-w-6xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <div>
-          <h1 className="hero-fade-2 font-display text-[clamp(3rem,8vw,5.8rem)] font-semibold leading-[0.93] tracking-[-0.05em] text-ink">
+          <h1 className="code-texture-title hero-fade-2 text-[clamp(3rem,8vw,5.8rem)] font-semibold leading-[0.93] tracking-[-0.05em]">
             Building digital
-            <span className="block text-accent">products that work.</span>
+            <span className="code-texture-accent block">
+              products that work.
+            </span>
           </h1>
 
           <p className="hero-fade-3 mt-7 max-w-xl text-[17px] leading-relaxed text-mute sm:text-lg">
@@ -25,17 +27,12 @@ export function Hero() {
 
           <div className="hero-fade-4 mt-8 flex flex-wrap gap-x-6 gap-y-2 font-mono text-[11px] uppercase tracking-[0.13em] text-mute">
             <span>Based in {site.location}</span>
-            <span className="hidden text-ink/25 sm:inline">/</span>
-            <span>Shipping for the web</span>
           </div>
 
           <div className="hero-fade-5 mt-10 flex flex-wrap items-center gap-3">
             <a href="#projects" className="btn-primary">
               Explore selected work
               <span aria-hidden className="ml-2">↘</span>
-            </a>
-            <a href="#contact" className="btn-ghost">
-              Get in touch
             </a>
           </div>
         </div>

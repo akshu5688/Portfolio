@@ -159,9 +159,16 @@ export const skills = {
   Frontend: ["React.js", "Next.js", "Tailwind CSS", "Responsive Design"],
   Backend: ["Node.js", "REST APIs"],
   Databases: ["PostgreSQL", "Supabase"],
-  "AI & Tools": ["Cursor AI", "Prompt Engineering"],
+  "AI & Tools": [
+    "Cursor AI",
+    "Antigravity",
+    "Claude AI",
+    "Flow",
+    "Lovable",
+    "Grok AI",
+  ],
   "Version Control": ["Git", "GitHub"],
-  Deployment: ["Vercel", "Railway"],
+  Deployment: ["Vercel"],
   "Development Tools": ["Cursor", "Postman"],
 };
 
