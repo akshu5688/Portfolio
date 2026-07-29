@@ -651,11 +651,69 @@ body {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
+  opacity: 0.18;
   background-image:
     linear-gradient(rgba(16, 20, 19, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(16, 20, 19, 0.05) 1px, transparent 1px);
   background-size: 24px 24px;
   mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.project-cover-image {
+  z-index: 0;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover .project-cover-image {
+  transform: scale(1.025);
+}
+
+.project-image-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(16, 20, 19, 0.03) 48%,
+    rgba(16, 20, 19, 0.5) 100%
+  );
+}
+
+.project-image-meta {
+  position: absolute;
+  right: 48px;
+  bottom: 12px;
+  left: 14px;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 9px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 9px;
+}
+
+.project-image-meta > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-image-dots {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 4px;
+}
+
+.project-image-dots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.68);
 }
 
 .project-browser {
@@ -706,6 +764,21 @@ body {
   display: grid;
   height: calc(100% - 30px);
   grid-template-columns: 38px 1fr;
+}
+
+.project-screenshot {
+  position: relative;
+  height: calc(100% - 30px);
+  overflow: hidden;
+  background: var(--cream-deep);
+}
+
+.project-screenshot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 1px rgba(16, 20, 19, 0.04);
+  pointer-events: none;
 }
 
 .browser-sidebar {
@@ -768,7 +841,7 @@ body {
   z-index: 2;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 9px;
-  color: rgba(16, 20, 19, 0.48);
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .project-arrow {

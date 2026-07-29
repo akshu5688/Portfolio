@@ -15,7 +15,6 @@ export function EngineeringVisual() {
           <span />
         </div>
         <p>system.architecture</p>
-        <span className="visual-status">live</span>
       </div>
 
       <div className="visual-canvas">

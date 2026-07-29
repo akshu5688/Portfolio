@@ -8,6 +8,7 @@ export type Project = {
   features: string[];
   github: string;
   live: string;
+  image: string;
 };
 
 export const site = {
@@ -40,7 +41,7 @@ export const experience = [
   {
     company: "Acharya Ventures",
     role: "AI Developer",
-    duration: "Nov 2025 – Present",
+    duration: "Nov 2025",
     technologies: [
       "React",
       "Next.js",
@@ -63,7 +64,7 @@ export const experience = [
   {
     company: "Startup911",
     role: "AI Developer",
-    duration: "Aug 2025 – Present",
+    duration: "Aug 2025",
     technologies: ["React", "Next.js", "Tailwind CSS", "SEO", "Cursor AI"],
     highlights: [
       "Developed modern landing pages and improved website SEO.",
@@ -101,6 +102,7 @@ export const projects: Project[] = [
     ],
     github: "", // fill later
     live: "https://www.eera-os.com/",
+    image: "/projects/eera-os-project.png",
   },
   {
     slug: "startup911",
@@ -119,6 +121,7 @@ export const projects: Project[] = [
     ],
     github: "", // fill later
     live: "https://www.startup911.in/",
+    image: "/projects/startup911-project.png",
   },
   {
     slug: "travel-mantra",
@@ -137,6 +140,7 @@ export const projects: Project[] = [
     ],
     github: "", // fill later
     live: "https://travel-mantra-final-rc6o.vercel.app/",
+    image: "/projects/travel-mantra-project.png",
   },
 ];
 

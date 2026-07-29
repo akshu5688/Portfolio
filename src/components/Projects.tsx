@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/data/portfolio";
 import { LiveSiteButton } from "./LiveSiteButton";
@@ -37,30 +38,26 @@ export function Projects() {
                 }`}
               >
                 <div className={`project-art project-art-${index + 1}`}>
-                  <div className="project-browser">
-                    <div className="project-browser-bar">
+                  <Image
+                    src={project.image}
+                    alt={`${project.name} website homepage`}
+                    fill
+                    priority={index === 0}
+                    sizes={
+                      index === 0
+                        ? "(min-width: 1024px) 42vw, 100vw"
+                        : "(min-width: 1024px) 50vw, 100vw"
+                    }
+                    className="project-cover-image"
+                  />
+                  <div className="project-image-shade" />
+                  <div className="project-image-meta">
+                    <div className="project-image-dots" aria-hidden>
                       <span />
                       <span />
                       <span />
-                      <div className="project-url">{project.live.replace(/^https?:\/\//, "")}</div>
                     </div>
-                    <div className="project-browser-body">
-                      <div className="browser-sidebar">
-                        <span className="active" />
-                        <span />
-                        <span />
-                        <span />
-                      </div>
-                      <div className="browser-content">
-                        <div className="browser-heading" />
-                        <div className="browser-copy" />
-                        <div className="browser-grid">
-                          <span />
-                          <span />
-                          <span />
-                        </div>
-                      </div>
-                    </div>
+                    <span>{project.live.replace(/^https?:\/\//, "")}</span>
                   </div>
                   <span className="project-number">0{index + 1}</span>
                 </div>
