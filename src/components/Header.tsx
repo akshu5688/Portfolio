@@ -33,7 +33,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <Link
           href="/"
-          className="font-display text-[15px] font-semibold tracking-tight text-ink transition-opacity hover:opacity-70"
+          className="font-display text-xl font-semibold tracking-tight text-ink transition-opacity hover:opacity-70"
         >
           {site.name}
         </Link>
