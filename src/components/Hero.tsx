@@ -1,5 +1,6 @@
 import { site } from "@/data/portfolio";
 import { EngineeringVisual } from "./EngineeringVisual";
+import { LiveCodeBackdrop } from "./LiveCodeBackdrop";
 
 export function Hero() {
   return (
@@ -9,6 +10,7 @@ export function Hero() {
     >
       <div className="hero-glow pointer-events-none absolute inset-0" aria-hidden />
       <div className="hero-grid pointer-events-none absolute inset-0 opacity-[0.35]" aria-hidden />
+      <LiveCodeBackdrop />
       <div className="hero-scanline pointer-events-none absolute inset-0" aria-hidden />
 
       <div className="relative mx-auto grid w-full max-w-6xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">

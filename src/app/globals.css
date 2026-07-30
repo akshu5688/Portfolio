@@ -358,6 +358,91 @@ body {
     );
 }
 
+.matrix-code-backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 12%,
+    black 84%,
+    transparent 100%
+  );
+}
+
+.matrix-code-rain {
+  position: absolute;
+  inset: -45% 0 0;
+  opacity: 0.46;
+}
+
+.matrix-column {
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 48px;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  color: color-mix(in srgb, var(--accent) 78%, #3dff9a);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 9px;
+  font-weight: 650;
+  text-shadow:
+    0 0 7px color-mix(in srgb, var(--accent) 55%, transparent),
+    0 0 16px color-mix(in srgb, #38ff9c 22%, transparent);
+  white-space: nowrap;
+  animation-name: matrix-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.matrix-column:nth-child(3n) {
+  opacity: 0.55;
+  filter: blur(0.25px);
+}
+
+.matrix-column:nth-child(4n + 1) {
+  opacity: 0.8;
+  font-size: 8px;
+}
+
+.matrix-column:nth-child(5n + 2) {
+  opacity: 0.4;
+}
+
+.matrix-column span {
+  display: block;
+}
+
+.matrix-glyph-bright {
+  color: #d8ffe8;
+  text-shadow:
+    0 0 5px #79ffb0,
+    0 0 13px color-mix(in srgb, var(--accent) 65%, transparent);
+}
+
+.matrix-code-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--cream) 72%, transparent) 0%,
+      color-mix(in srgb, var(--cream) 28%, transparent) 34%,
+      color-mix(in srgb, var(--cream) 25%, transparent) 68%,
+      color-mix(in srgb, var(--cream) 70%, transparent) 100%
+    ),
+    radial-gradient(
+      ellipse at center,
+      transparent 15%,
+      color-mix(in srgb, var(--cream) 34%, transparent) 78%
+    );
+}
+
 .hero-grid {
   background-image:
     linear-gradient(
@@ -938,6 +1023,15 @@ body {
   }
 }
 
+@keyframes matrix-fall {
+  from {
+    transform: translate3d(0, -35%, 0);
+  }
+  to {
+    transform: translate3d(0, 145svh, 0);
+  }
+}
+
 @keyframes background-drift {
   0%,
   100% {
@@ -1052,6 +1146,14 @@ body {
 
   .background-orb {
     opacity: 0.2;
+  }
+
+  .matrix-code-rain {
+    opacity: 0.18;
+  }
+
+  .matrix-column:nth-child(n + 15) {
+    display: none;
   }
 
   .engineering-visual {
@@ -1169,7 +1271,8 @@ body {
   .background-circuit path,
   .background-circuit circle,
   .background-cross,
-  .background-ring::before {
+  .background-ring::before,
+  .matrix-column {
     animation: none;
   }
 }
